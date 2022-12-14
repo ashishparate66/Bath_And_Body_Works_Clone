@@ -1,0 +1,399 @@
+*{
+    font-family: sans-serif,'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+#nav1{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height:35px;
+    background-color: rgb(233, 231, 231);
+    margin: auto;
+    padding: 0px;
+    font-size: 12px;
+    width: 100%;
+
+}#nav1>:nth-child(1){
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    margin-left: 50px;
+   
+   
+}#nav1>:nth-child(2){
+    display: flex;
+    gap: 15px;
+    margin-right: 50px;
+   
+}
+#nav1>:nth-child(2)>h6{
+    color: teal;
+    font-size: 15px;
+    height: 50px;
+    margin-top: 10px;
+}
+#nav1>:nth-child(1)>h6{
+    color: rgb(244, 18, 138);
+    font-size: 15px;
+    height: 50px;
+    margin-top: 10px;
+}
+#nav2{
+    display: block;
+    text-align: center;
+   height:100PX;
+    margin: auto;
+    padding: 0px;
+    width: 100%;
+    background-color: white;
+
+}#nav2>:nth-child(1){
+    display: flex;
+    gap: 15px;
+    text-align: center;
+   justify-content: flex-end;
+    height: 50px;  
+   
+}#nav2>:nth-child(1)>div{
+    margin-right: 200px;
+    color: rgb(198, 31, 9);  
+    margin-top: 20px; 
+}#nav2>:nth-child(1)>div>img{
+margin-top: 30px;
+margin-left: 20px;
+
+}#nav2>:nth-child(1)>div>input{
+   height: 30px;
+   margin-bottom: 60px;
+}
+#nav2>:nth-child(2){
+    display: flex;
+   height: 80PX;
+    text-align: center;
+    justify-content: space-around;
+    height: 30px;
+    margin-top: 40px;
+    font:bold;
+   
+}.holiday_col{
+    color: rgb(192, 6, 6);
+    
+}
+#nav3{
+    background-color: rgb(206, 237, 250);
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+    color:rgb(10, 92, 127) ;
+    font-size: 20px;
+    align-items: center;
+   margin-top: 10px;
+   
+}#nav3 h5{
+   margin: auto;
+   align-items: center;
+   text-align: center;
+   padding-top: 5px;
+}
+#top_banner{
+    display: block;
+    width: 80%;
+    height: 600px;
+    margin: auto;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 65px;
+  
+}#bg_end_col{
+    background-color: rgb(207, 12, 12);
+    color: white;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+
+}#bg_end_col > h3{
+   padding-top: 10px;
+    
+}
+/* slider */
+#top_offers{
+    width: 80%;
+    height: 350px;
+    background-color:rgba(193, 191, 191, 0.921);
+    margin: auto;
+    margin-top: 100px;
+    justify-content: space-between;
+    text-align: center;
+    
+}#top_offers h1{
+    padding-top: 20px;
+}.slider-slide{
+    display: flex;
+    width: 100%;
+    height:300px;
+    margin: auto;
+    justify-content: space-evenly;    
+}
+.slider{
+    background-color:white;
+    width: 90%;
+    padding-top: 25px;
+    height: 250px;
+    margin: auto;
+    padding-bottom: 20px;   
+}
+.slider>div button{
+    height: 40px;
+    width: 80%;
+    background-color:black;
+    color: white;
+    font-size: 18px;
+}
+/* offer baner */
+#offer_banner{
+    display: block;
+    width: 80%;
+    height: 600px;
+    margin: auto;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 65px;
+}
+/* shop by Category */
+#shop_by_heading{
+    text-align: center;
+    width: 80%;
+    
+    height: 300px;
+    margin: auto;
+}#shop_by_heading h2{
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif
+}
+#shop_by_category{
+    display: flex;
+    width:100%;
+    height: 200px;
+   
+    justify-content: space-between;   
+}.block{
+    display: block;
+    width: 100%;
+  
+}.block img{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 80%;
+}
+/* advertise banner */
+#advertise_banner{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  
+    gap: 30px;
+}#advertise_banner p {
+   color: grey;
+   font-family: Arial, Helvetica, sans-serif;
+}#advertise_banner img{
+width: 100%;
+}
+/* holiday shop-banner */
+#holiday_shop_banner{
+    width: 80%;
+    margin: auto;  
+}#holiday_shop_banner img{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+/* buttons */
+#buttons{
+   
+    width: 80%;
+    margin: auto;
+ margin-top: 30px;
+ text-align: center;
+}#buttons button{
+    height: 40px;
+    width: 17%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    font: bold;
+}
+/* moxy banner */
+#moxy_banner{
+    width: 80%;
+    margin: auto;
+    height: 200px;  
+}#moxy_banner img{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    height: 200px;
+}
+#moxy_buttons{ 
+    width: 80%;
+    margin: auto;
+ margin-top: 30px;
+ text-align: center;
+}#moxy_buttons button{
+    height: 40px;
+    width: 17%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    font: bold;
+}
+/* good More Things */
+#good_things_heading{
+    text-align: center;
+    width: 80%;
+    
+    height: 300px;
+    margin: auto;
+}#good_things_heading h2{
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif
+}
+#good_things_category{
+    display: flex;
+    width:100%;
+    height: 200px;
+   
+    justify-content: space-between;   
+}.block1{
+    display: block;
+    width: 100%;
+  
+}.block1 img{ 
+    width: 80%;
+}
+/* bath and body works heading bottom side */
+
+#bath_heading_and_img{
+   text-align: center;
+   margin: auto;
+   width: 80%;
+}
+#bath_heading_bottom h3{
+  
+    margin: auto;
+}#bath_heading_bottom p{
+padding-top: 10px;
+    margin: auto;
+    color: grey;
+}
+/*  */
+.slider-slide{
+    display: flex;
+    width: 100%;
+    height:220px;
+    margin: auto;
+    justify-content: space-evenly;    
+   
+}
+.slider1{
+  
+    width: 100%;
+    padding-top: 25px;
+    height: 220px;
+    margin: auto;
+    padding-bottom: 20px;  
+   
+
+}.slider1 img{
+    width: 80%;
+}
+/* bath and body works info */
+#bath_info{
+    text-align: center;
+    padding-top: 30px;
+    width: 60%;
+    margin: auto;
+}#bath_info p{
+    color: grey;
+    font-family: serif;
+}
+/* FAQ */
+
+.faq{
+    display: flex;
+    margin: auto;
+     width: 100%;
+     justify-content: center;
+     margin-top: 150px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     height: 420px;
+     gap: 50px;
+     padding-top: 20px;
+    
+}.faq>div:nth-child(1){
+    width:22% ;  
+}.faq p{
+    color: grey;
+    font-family: serif;
+    font-size: 15px;  
+}.faq input{
+   height: 30px;
+}.faq button{
+    height: 30px;
+    color: white;
+    background-color: black;
+}.social_logo{
+    display: flex;
+    gap: 20px;
+}.social_logo img{
+    width: 30px;
+    height: 30px;
+}
+/* footer */
+.footer{
+    padding-top: 20px;
+    background-color: rgb(208, 207, 207);
+    margin: auto;
+    text-align: center;
+    height: 180px;   
+}.footer p{
+    width: 60%;
+    margin: auto;
+    line-height: 20px;
+    padding-top: 20px;
+    font-family: serif;
+    color: rgb(36, 35, 35);
+}
+
+.sub_menu-1{
+    display: none;  
+}.sec:hover .sub_menu-1{
+    display: block;
+    position:absolute;
+    background-color: white;
+    padding: 10px;
+    margin-left: -15px; 
+}.sec:hover .sub_menu-1 ul{
+    display: block;
+    margin: 20px;
+    padding: 10px;   
+}div:hover .sub_menu-1 ul li{
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    color: black;
+}div:hover .sub_menu-1 ul li a{
+    color: black;
+    text-decoration: none;
+}div:hover .sub_menu-1 ul li a:hover{
+    color: teal;
+}.sec{
+    margin-top: 10px;
+}
