@@ -4,9 +4,198 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>cart Page</title>
+    <link rel="stylesheet" href="cart.css">
 </head>
 <body>
-    <h1>Welcome to cart</h1>
+ <!-- nav bar -->
+ <div id="nav1">
+    <div>
+     <h6>POINTS. PERKS. EXCLUSIVES.</h6>
+     <P><u>Join Rewards!</u></P>
+    </div>
+    <div>
+     <h6>PICK UP IN STORE</h6>
+     <p><u>Set Store</u></p>
+    </div>
+ </div>
+ <div id="nav2">
+     <div>
+         <div><h1>Bath & Body Works</h1></div>
+         <div>
+         <input type="search" placeholder="Search by Products">
+        <a href="signIn.html" >
+         <img  src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/Sites-BathAndBodyWorks-Site/-/default/dw8f5c8e40/images/svg-icons/UI-MyAccount.svg?yocs=o_s_" 
+         width="40px" height="35px" alt="">
+        </a>
+        <a href="cart.html">
+         <img id="cart" src="https://tse1.mm.bing.net/th?id=OIP.3dozFfqPTg-zg6lBEY7pAgHaGE&pid=Api&P=0" 
+         width="30px" height="35px" alt="">
+        </a>
+     </div>
+     </div>
+     <div  id="nav2A">
+     <div class="sec">  
+         <a>TOP OFFERS</a>
+         <div class="sub_menu-1">
+             <ul>
+                <li><a href="home.html">HOME</a></li>
+                 <li><a href="bathShower.html">BATH & SHOWER</a></li>
+                 <li><a href="moisture.html">MOISTURIZERS</a></li>
+             </ul>
+          </div>   
+     </div>
+     <div class="sec">
+       <a > BODY CARE</a> 
+              <div class="sub_menu-1">
+                 <ul>
+                    <li><a href="home.html">HOME</a></li>
+                     <li><a href="bathShower.html">BATH & SHOWER</a></li>
+                     <li><a href="moisture.html">MOISTURIZERS</a></li>
+                 </ul>
+              </div>   
+     </div>
+     <div class="sec">  
+         <a>CANDLES</a>
+         <div class="sub_menu-1">
+             <ul>
+                <li><a href="home.html">HOME</a></li>
+                 <li><a href="bathShower.html">BATH & SHOWER</a></li>
+                 <li><a href="moisture.html">MOISTURIZERS</a></li>
+             </ul>
+          </div>   
+     </div>
+     <div class="sec">  
+         <a>WALLFLOWERS & AIR FRESHENERS </a>
+         <div class="sub_menu-1">
+             <ul>
+                <li><a href="home.html">HOME</a></li>
+                 <li><a href="bathShower.html">BATH & SHOWER</a></li>
+                 <li><a href="moisture.html">MOISTURIZERS</a></li>
+             </ul>
+          </div>   
+     </div>
+     <div class="sec">  
+         <a>HAND SOAPS & SANITIZERS</a>
+         <div class="sub_menu-1">
+             <ul>
+                <li><a href="home.html">HOME</a></li>
+                 <li><a href="bathShower.html">BATH & SHOWER</a></li>
+                 <li><a href="moisture.html">MOISTURIZERS</a></li>
+             </ul>
+          </div>   
+     </div>
+     <div class="sec">  
+         <a>MEN'S SHOP</a>
+         <div class="sub_menu-1">
+             <ul>
+                <li><a href="home.html">HOME</a></li>
+                 <li><a href="bathShower.html">BATH & SHOWER</a></li>
+                 <li><a href="moisture.html">MOISTURIZERS</a></li>
+             </ul>
+          </div>   
+     </div>
+     <div class="sec">  
+         <a>MOXY</a>
+         <div class="sub_menu-1">
+             <ul>
+                <li><a href="home.html">HOME</a></li>
+                 <li><a href="bathShower.html">BATH & SHOWER</a></li>
+                 <li><a href="moisture.html">MOISTURIZERS</a></li>
+             </ul>
+          </div>   
+     </div>
+     <div class="sec holiday_col">  
+         <a>HOLIDAY SHOP</a>
+         <div class="sub_menu-1">
+             <ul>
+                <li><a href="home.html">HOME</a></li>
+                 <li><a href="bathShower.html">BATH & SHOWER</a></li>
+                 <li><a href="moisture.html">MOISTURIZERS</a></li>
+             </ul>
+          </div>   
+     </div>
+ </div>
+ <div id="nav3">
+     <h5>Perk Alert: All new Rewards members get $10 off any $30 purchase! 
+         Join the VIPs </h5>
+ </div>
+ </div>
+
+ <!--Shoping  Heading -->
+ <div id="continue_shopping">
+    <a href="bathShower.html"><p>CONTINUE SHOPPING</p></a>
+ </div>
+ 
+ <div id="shopping_bag">
+    <p>Shopping Bag</p>
+    <hr style="width: 100%; height: 1px; background-color: black;">
+</div>
+
+<!-- add the product cart -->
+
+<div id="cart-container">
+    <h4 id="total">Total:0</h4>
+    <!-- Here Append All the cart Products  -->
+  </div>
 </body>
+<script>
+    let container = document.getElementById("cart-container");
+    let cartData = JSON.parse(localStorage.getItem("cart"));
+    let total = document.getElementById("total");
+    
+    if (cartData == null) {
+      cartData =[];
+    }
+    
+    displayProduct(cartData)
+
+    function displayProduct(actualData){
+               container.innerHTML=null;
+               actualData.forEach((element) =>{
+                let card = document.createElement("div");
+                let image =document.createElement("img");
+                image.setAttribute("src",element.avatar);
+                let name = document.createElement("h3")
+                name.innerText = element.name
+                let category = document.createElement("p");
+                category.innerText = element.category
+                let price = document.createElement("h4");
+                price.innerText = "Price : " + element.price
+               
+
+        let increment = document.createElement("button");
+        increment.innerText = "+"
+        increment.addEventListener("click",()=>{
+          quantity.innerText = element.quantity++;
+          cartTotal.innerText=0
+      
+        })
+        let quantity = document.createElement("span");
+        quantity.innerText = element.quantity;
+        let decrement = document.createElement("button");
+        decrement.innerText = "-"
+        decrement.addEventListener("click",()=>{
+          quantity.innerText = element.quantity--;
+          
+        })
+        let remove = document.createElement("button");
+        remove.innerText ="Remove"
+       remove.addEventListener("click",()=>{
+          delElement()
+        })
+        function delElement(a){
+          cartData.splice(a,1)
+          displayProduct(actualData)
+          localStorage.setItem("cart",JSON.stringify(cartData));
+
+        } 
+      
+        card.append(image,name,category,price,increment,quantity,decrement,remove)
+                container.append(card);
+               
+      })
+      }
+
+</script>
 </html>
