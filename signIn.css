@@ -160,130 +160,195 @@ div:hover .sub_menu-1 ul li a:hover {
     margin-top: 10px;
 }
 
-/* page heading */
-#page {
-    width: 100%;
-
-    margin-top: 100px;
-    height: auto;
-    display: flex;
-    gap: 80px;
-    justify-content: center;
-
+/* home key */
+#home p {
+    margin-top: 90px;
+    font-size: 15px;
+    color: grey;
+    margin-left: 30px;
 }
 
-#leftSide {
-    width: 14%;
-    height: auto;
-
-
-}
-
-#leftSide p {
-    color: rgb(92, 90, 90);
-    font-family: serif;
-    font-size: medium;
-}
-
-/*============== right side========== */
-#rightSide {
-    width: 80%;
-    height: auto;
-
-}
-
-#product-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: auto;
-    width: 90%;
-    gap: 20px;
-    margin-top: 50px;
-    line-height: 8px;
-    text-align: center;
-    row-gap: 80px;
-}
-
-#product-container div {
-    width: 100%;
-    margin: auto;
-    margin-left: 10px;
-}
-
-#product-container img {
+/* top logo image */
+#top_logo {
     width: 60%;
-    height: 300px;
+    height: 150px;
     margin: auto;
 }
 
-#product-container button {
-    width: 90%;
+#top_logo img {
+    width: 100%;
+    height: 120px;
+}
+
+/* sign in heading */
+#sign_in {
+    width: 60%;
     margin: auto;
+    line-height: 5px;
+    font-family: Trade Gothic W01 Light, Arial, sans-serif;
+    color: rgb(46, 45, 45);
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+/* sign in main container */
+#sign_container {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+}
+
+/* part 1 */
+#signIn_part {
+    width: 60%;
+    margin: auto;
+    line-height: 10px;
+}
+
+#signIn_part h5 {
+    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
+    color: #333;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+#signIn_part h6 {
+    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
+    color: #333;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+}
+
+#signIn_part p {
+    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
+    color: #333;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: left;
+    width: 50%;
+    margin-left: 50px;
+}
+
+#signIn_part input {
+    text-align: left;
+    margin-left: 50px;
+    height: 35px;
+    width: 80%;
+    border: 1px solid rgb(202, 194, 194);
+}
+
+#signIn_part u {
+    color: #333;
+    font-size: 15px;
+}
+
+#Privacy_policy u {
+    color: #333;
+    font-size: 10px;
+    margin-left: 130px;
+}
+
+#signIn_part button {
+    text-align: center;
+    margin: auto;
+    height: 30px;
+    width: 120px;
+    margin-left: 150px;
     background-color: black;
     color: white;
-    height: 30px;
 }
 
-#product-container button:hover {
-    background-color: wheat;
-    color: black;
-    cursor: pointer;
-}
-
-#product-container h4 {
-    color: red;
-    font: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
-
-/* ==========filter part======== */
-#filter_div {
-    line-height: 0px;
-}
-
-#filter {
-    background-color: rgb(220, 215, 215);
-    width: 25%;
-    height: 50px;
-    border: 2px solid black;
+/* part 2 */
+#createPart {
     margin: auto;
-    border-radius: 5px;
+    width: 60%;
+    line-height: 15px;
+    margin-top: 40px;
+}
+
+#createPart h5 {
     font-size: 20px;
-}
-
-#filter_div {
-    margin: auto;
-
-}
-
-/* bottom paragraph */
-#hr {
-    margin-top: 100px;
-}
-
-#bottom_para_heading {
-    font-size: 25px;
-    font-family: Trade Gothic W01 Light, Arial, sans-serif;
+    text-align: center;
+    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
     color: #333;
     font-weight: 400;
 }
 
-#bottom_para {
-    font-family: Trade Gothic W01 Light, Arial, sans-serif;
-    color: rgb(112, 108, 108);
+#createPart h6 {
+    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
+    color: #333;
     font-weight: 400;
     font-size: 15px;
-    width: 70%;
+    text-align: center;
+
 }
 
-/* FAQ */
+#createPart img {
+    width: 90%;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
 
+#createPart button {
+    text-align: center;
+    margin: auto;
+    height: 30px;
+    width: 200px;
+    display: block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    word-spacing: 5px;
+    margin-top: 30px;
+}
+
+/* middle line */
+#spacer {
+    background: none;
+    position: relative;
+    display: inline-block;
+    width: 9%;
+}
+
+#line {
+    border-left: 0.5px solid rgb(179, 171, 171);
+    height: 470px;
+    width: 0px;
+    margin-left: 40px;
+
+}
+
+/* quetions  and contact number */
+
+#quetion_number {
+
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+#quetion_number p {
+    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
+    color: #333;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+/* faq */
 .faq {
     display: flex;
     margin: auto;
     width: 100%;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 70px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height: 420px;
     gap: 50px;
