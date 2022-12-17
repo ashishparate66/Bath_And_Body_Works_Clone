@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
+    font-weight: 400;
+}
+
+/* header   nav bar */
+#header {
+    background-color: rgb(224, 220, 220);
+    height: 40px;
+    width: 100%;
+    font-size: 12px;
+}
+
+#header p {
+    margin-left: 40px;
+    padding-top: 10px;
+}
+
+#heading_checkout {
+
+    color: rgb(198, 31, 9);
+    margin: auto;
+    text-align: center;
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    height: 50px;
+
+}
+/* cart page go button */
+#cartpage{
+    margin-left: 30px;
+    margin-top: 20px;
+    display: flex;
+    word-spacing: 10px;
+   
+}#cartpage a{
+    text-decoration: none;
+    color: #333;
+    
+}
+
+/* container shipping address */
+#shipping {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: teal;
+}
+#msg{
+    margin-top: 30px;
+    color: red;
+    font-size: 30px;
+}
+
+#container {
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+
+}
+
+#container h5 {
+    color: rgb(18, 184, 63);
+    font-size: 20px;
+}
+
+/* left side div shiiping address */
+#shipping_add {
+    width: 80%;
+    line-height: 35px;
+    margin-left: 10px;
+}
+
+#shipping_add input {
+    height: 40px;
+    width: 80%;
+
+}
+
+#shipping_add p {
+    color: #333;
+}
+
+#submit {
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(20, 160, 20);
+    color: white;
+    border: none;
+    border-radius: 35px;
+}

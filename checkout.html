@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout page</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+
+    <!-- header and nav bar -->
+    <div id="header">
+        <p>We're here to help! 1-800-756-5005 | 7 Days a Week 6AM–2AM EST</p>
+    </div>
+    <div id="heading_checkout">
+        <h1>Bath & Body Works</h1>
+    </div>
+    <div id="cartpage">
+        <a href="home.html">Home/ </a>
+        <a href="cart.html">  Cart</a>
+    </div>
+    <div id="shipping">
+        <p>Shipping</p>
+        <h5 id="msg"></h5>
+    </div>
+
+    <!-- form container -->
+    <div id="container">
+        <div id="shipping_add">
+            <h5>SHIPPING ADDRESS</h5>
+            <form>
+                <p>First Name</p>
+                <input type="text" name="" id="name" required />
+                <p>Last Name</p>
+                <input type="text" name="" id="last" required />
+                <p>Address 1</p>
+                <input type="text" name="" id="address_1" required />
+                <p>Address 2</p>
+                <input type="text" name="" id="address_2" required />
+                <p>City</p>
+                <input type="text" name="" id="city" required />
+                <p>State</p>
+                <input type="text" name="" id="state" required />
+                <p>ZIP Code </p>
+                <input type="Number" id="zipcode" required>
+                <p>Phone</p>
+                <input type="Number" id="phone" required>
+                <input type="submit" id="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    let shippingData = JSON.parse(localStorage.getItem("shipping-data")) || [];
+    let form = document.querySelector("form")
+    form.addEventListener("submit", submituser)
+
+    function submituser(e) {
+        e.preventDefault();
+        let name = document.getElementById("name").value
+        let last = document.getElementById("last").value
+        let address1 = document.getElementById("address_1").value
+        let address2 = document.getElementById("address_2").value
+        let city = document.getElementById("city").value
+        let state = document.getElementById("state").value
+        let zipcode = document.getElementById("zipcode").value
+        let phone = document.getElementById("phone").value
+
+        let user = { name, last, address1, address2, city, state, zipcode, phone }
+    
+        shippingData.push(user)
+        let msg = document.getElementById("msg")
+        msg.append("Your order is Placed Successfully")
+        localStorage.setItem("shipping-data",JSON.stringify(shippingData));
+        
+    }
+</script>
+
+</html>
