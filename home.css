@@ -69,15 +69,20 @@
 }
 
 #nav2>:nth-child(1)>div {
-    margin-right: 200px;
+   
     color: rgb(198, 31, 9);
     margin-top: 20px;
+    margin-right: 50px
 }
 
 #nav2>:nth-child(1)>div>img {
     margin-top: 30px;
     margin-left: 20px;
 
+}#heading_username{
+    color: rgb(57, 69, 241);
+    margin-left: 0px;
+    margin-right: 120px;
 }
 
 #nav2>:nth-child(1)>div>input {

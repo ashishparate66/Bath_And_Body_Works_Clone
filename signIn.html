@@ -143,13 +143,17 @@
         <div id="signIn_part">
             <h5>SIGN IN</h5>
             <h6>If you already have an account with us, sign in below</h6>
-            <p>Email Address</p>
-            <input type="email" value="">
-            <p>Password</p>
-            <input type="password" value="">
+            <h3 id="heading"></h3>
+            <h3 id="heading1"></h3>
+            <form>
+                <p>Email Address</p>
+                <input type="email" id="email" />
+                <p>Password</p>
+                <input type="password" id="password" />
+                <input type="submit" value="SIGN IN" id="button" />
+            </form>
             <p><u>Forget Password?</u></p>
             <p id="Privacy_policy"><u>Privacy Policy</u></p>
-            <button>SIGN IN</button>
         </div>
 
         <!-- middle line -->
@@ -163,7 +167,7 @@
             <h6>Create an account to access the best of your favorite store</h6>
             <img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw0f47b7b9/images/loyalty/boc-launch-prospects_lacb_0.jpg?yocs=s_"
                 width="" height="" alt="">
-            <button>CREATE AN ACCOUNT</button>
+            <button><a href="createAccount.html">CREATE AN ACCOUNT</a></button>
         </div>
     </div>
 
@@ -173,7 +177,7 @@
         <p>We’re here for you! Call us at 1-800-756-5005.</p>
     </div>
 
-
+    <!-- faq -->
     <div class="faq">
         <div>
             <h5>GET EMAIL OFFERS & THE LATEST NEWS FROM BATH & BODY WORKS!</h5>
@@ -238,5 +242,36 @@
     </div>
 
 </body>
+<script>
+    let userData = JSON.parse(localStorage.getItem("email-data")) || [];
+    let form = document.querySelector("form");
+    let heading = document.getElementById("heading");
+    let heading1 = document.getElementById("heading1");
+
+    form.addEventListener("submit", submituser)
+
+    function submituser(e) {
+        e.preventDefault();
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+      
+        store(email, password)
+    }
+    function store(email, password) {
+        userData.forEach((element, index) => {
+            if (element.email == email && element.password == password) {
+                
+                heading.innerHTML = "Login Successful"
+                heading1.innerHTML = ""
+                
+             localStorage.setItem("user-Name",element.userName)
+            } else {
+                heading1.innerHTML = "Wrong Email and Password"
+                heading.innerHTML = ""
+            }
+        })
+    }
+
+</script>
 
 </html>

@@ -160,10 +160,9 @@ div:hover .sub_menu-1 ul li a:hover {
     margin-top: 10px;
 }
 
-/* home key */
 #home p {
     margin-top: 90px;
-    font-size: 15px;
+    font-size: 10px;
     color: grey;
     margin-left: 30px;
 }
@@ -180,8 +179,8 @@ div:hover .sub_menu-1 ul li a:hover {
     height: 120px;
 }
 
-/* sign in heading */
-#sign_in {
+/* create an account */
+#create_account {
     width: 60%;
     margin: auto;
     line-height: 5px;
@@ -192,149 +191,61 @@ div:hover .sub_menu-1 ul li a:hover {
     margin-top: 30px;
 }
 
-/* sign in main container */
-#sign_container {
-    width: 65%;
+/* form */
+
+#form_container {
+    width: 40%;
+    display: block;
     margin: auto;
-    display: flex;
-    gap: 40px;
+    line-height: 6px;
 }
 
-/* part 1 */
-#signIn_part {
+#form {
     width: 60%;
     margin: auto;
-    line-height: 10px;
 }
 
-#signIn_part h5 {
-    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
-    color: #333;
-    font-weight: 400;
-    font-size: 20px;
-    text-align: center;
-}
-
-#signIn_part h6 {
-    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
-    color: #333;
-    font-weight: 400;
-    font-size: 15px;
-    text-align: center;
-}
-
-#signIn_part p {
-    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
-    color: #333;
-    font-weight: 400;
-    font-size: 20px;
-    text-align: left;
-    width: 50%;
-    margin-left: 50px;
-}
-
-#signIn_part input {
-    text-align: left;
-    margin-left: 50px;
+#form input {
+    width: 350px;
     height: 35px;
-    width: 80%;
-    border: 1px solid rgb(202, 194, 194);
-}
-
-#signIn_part u {
-    color: #333;
-    font-size: 15px;
-}
-
-#Privacy_policy u {
-    color: #333;
-    font-size: 10px;
-    margin-left: 130px;
-}
-
-#signIn_part #button {
-    text-align: center;
-    margin: auto;
-    height: 30px;
-    width: 120px;
-    margin-left: 150px;
-    background-color: black;
-    color: white;
-    margin-top: 30px;
-    cursor: pointer;
-}
-
-/* part 2 */
-#createPart {
-    margin: auto;
-    width: 60%;
-    line-height: 15px;
-    margin-top: 40px;
-}
-
-#createPart h5 {
-    font-size: 20px;
-    text-align: center;
     font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
-    color: #333;
+    color: black;
     font-weight: 400;
 }
 
-#createPart h6 {
+#form p {
     font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
     color: #333;
     font-weight: 400;
     font-size: 15px;
-    text-align: center;
-
 }
 
-#createPart img {
-    width: 90%;
-    display: block;
-    justify-content: center;
+#Privacy_policy {
     text-align: center;
-    margin: auto;
+    font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
+    color: #333;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 20px;
 }
 
-#createPart button {
+#form #button {
     text-align: center;
     margin: auto;
     height: 30px;
-    width: 200px;
+    width: 170px;
     display: block;
-    background-color: black;
+    background-color: rgb(22, 21, 21);
     text-align: center;
     justify-content: center;
     word-spacing: 5px;
     margin-top: 30px;
     text-decoration: none;
     color: white;
-}#createPart a{
-    text-decoration: none;
-    color: white;
-}
-#heading{
-    color: green;
-}
-#heading1{
-    color: red;
-}
-
-/* middle line */
-#spacer {
-    background: none;
-    position: relative;
-    display: inline-block;
-    width: 9%;
-}
-
-#line {
-    border-left: 0.5px solid rgb(179, 171, 171);
-    height: 470px;
-    width: 0px;
-    margin-left: 40px;
-
+    cursor: pointer;
+}#form #button:hover{
+    background-color: #999;
+    color:black;
 }
 
 /* quetions  and contact number */
@@ -351,7 +262,7 @@ div:hover .sub_menu-1 ul li a:hover {
     font-family: 'Trade Gothic W01', Light, Arial, sans-serif;
     color: #333;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 /* faq */

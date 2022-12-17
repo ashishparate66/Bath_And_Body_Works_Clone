@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bathShower</title>
-    <link rel="stylesheet" href="bathShower.css">
+    <title>Create Page</title>
+    <link rel="stylesheet" href="createAccount.css">
 </head>
 
 <body>
+
     <!-- nav bar -->
     <div id="nav1">
         <div>
@@ -125,88 +126,54 @@
                 Join the VIPs </h5>
         </div>
     </div>
-    <!-- page heading -->
 
-    <div id="page">
-        <div id="leftSide">
-            <div>
-                <h5>TOP OFFERS</h5>
-                <P>Buy 3, Get 3 FREE All Full-Size Body care </P>
-                <p>2/$10, 4/$18, 6/$24 Shea Butter cleansing Bars</p>
-                <p> Buy 3, Get 1 FREE Travel, Hand & Lip Care</p>
-            </div>
-            <div>
-                <h5>BATH & SHOWER</h5>
-                <p>All Bath & Shower</p>
-                <p>Body Wash & Shower Gel</p>
-            </div>
-            <div>
-                <h5>MOISTURIZERS</h5>
-                <p>All Moisturizers</p>
-                <p>Body Lotion</p>
-                <p>Body Cream</p>
-            </div>
-            <div>
-                <h5>FRAGRANCE</h5>
-                <p>All Fragrance</p>
-                <p>Body Sprays & Mists</p>
-                <p>Perfume & Cologne</p>
-            </div>
-            <div>
-                <h5>NEW & NOW</h5>
-                <p>All Aromatherapy</p>
-            </div>
-        </div>
-        <div id="rightSide">
-            <div>
-                <h2>All Body Care</h2>
-                <hr style="width: 100%; height: 1px; background-color: black;">
-            </div>
-            <div id="filter_div">
-                <h4></h4>
-                <select name="" id="filter">
-                    <option value="">Filter by Product Type</option>
-                    <option value="Shower Gel">Shower Gel</option>
-                    <option value="Body wash">Body wash</option>
-                    <option value="3-in-1 face Wash,hair,bodywash">3-in-1 face Wash,hair,bodywash</option>
-                    <option value="3-in-1 hair,Face & body wash">3-in-1 hair,Face & body wash</option>
-                    <option value="Moisturizing Bodywash">Moisturizing Bodywash</option>
-                    <option value="Exfoliating Glow Body Scrub">Exfoliating Glow Body Scrub</option>
-                </select>
-            </div>
-            <div id="product-container">
-                <!-- Here append all the product -->
+    <!--home  Heading -->
+    <div id="home">
+        <a href="home.html">
+            <p>HOME / CREATE AN ACCOUNT</p>
+        </a>
+    </div>
+    <!-- top logo images -->
 
-            </div>
-
-            <!-- Bottom Paragraph All Bath & Shower from Bath & Body Works -->
-            <hr id="hr" style="width: 100%; height: 1px; background-color: black;">
-            <div>
-                <p id="bottom_para_heading">All Bath & Shower from Bath & Body Works</p>
-            </div>
-            <div id="bottom_para">
-                <p>Add some magic to your routine with bath and shower
-                    products from Bath & Body Works. From extra-bubbly
-                    shower gel to exfoliating body scrub to nourishing
-                    moisturizing body wash — there’s a cleanser (and fragrance)
-                    for everything you’d ever want!</p>
-
-                <p>And when it comes to fragrances, we have even more variety.
-                    Looking for something to add a little pep in your step
-                    (especially during that before-work shower)? Reach for
-                    some of our go-to classics or a brand-new seasonal scent
-                    or even an aromatherapy blend.</p>
-
-                <p>Shop all bath and shower and get ready to have the most
-                    fragrant experience every time you’re getting ready for
-                    the day. P.S. Switch up your routine with a shea butter
-                    cleansing bar — it has a rich, creamy lather you’ll be
-                    obsessed with.</p>
-            </div>
-
-        </div>
+    <div id="top_logo">
+        <img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/-/Sites-BathAndBodyWorks-Library/default/dw67bc4699/images/banners/sign-in_d.png?yocs=s_"
+            width="" height="" alt="">
     </div>
 
+    <!-- create an  account -->
+    <div id="create_account">
+        <p>Create an Account</p>
+        <hr style="width: 100%; height: 1px; background-color: black;">
+    </div>
+
+
+    <!-- form create account -->
+    <div id="form_container">
+        <form id="form">
+            <p>First Name</p>
+            <input type="text" name="" id="name" required />
+            <p>Last Name</p>
+            <input type="text" name="" id="last" required />
+            <p>Email</p>
+            <input type="email" name="" id="email" required />
+
+            <p>ZIP/Postal Code</p>
+            <input type="number" name="" id="postal" required />
+            <p>Phone</p>
+            <input type="number" name="" id="phone" required />
+            <p>Password</p>
+            <input type="password" name="" id="password" required /> <br>
+            <input type="submit" value="CREATE ACCOUNT" id="button" />
+        </form>
+        <p id="Privacy_policy"><u>Privacy Policy</u></p>
+    </div>
+    <!-- quetions  and contact number-->
+    <div id="quetion_number">
+        <p>QUESTIONS?</p>
+        <p>We’re here for you! Call us at 1-800-756-5005.</p>
+    </div>
+
+    <!-- faq -->
     <div class="faq">
         <div>
             <h5>GET EMAIL OFFERS & THE LATEST NEWS FROM BATH & BODY WORKS!</h5>
@@ -269,79 +236,29 @@
         <p>© 2022 Bath & Body Works Direct, Inc. All Rights Reserved.</p>
 
     </div>
+
 </body>
+
 <script>
-    let container = document.getElementById("product-container");
-    let filterselect = document.getElementById("filter");
-    let fetchedData = [];
+    let userData = JSON.parse(localStorage.getItem("email-data")) || [];
+    let form = document.querySelector("form")
+    form.addEventListener("submit", submituser)
 
-    filterselect.addEventListener("change", () => {
-        let filtered = fetchedData.filter((element) => {
-            if (element.category == filterselect.value) {
-                return true
-            } else {
-                return false
-            }
-        })
-        displayProduct(filtered)
-    })
+    function submituser(e) {
+        e.preventDefault();
+        let name = document.getElementById("name").value
+        let last = document.getElementById("last").value
+        let email = document.getElementById("email").value
+        let postal = document.getElementById("postal").value
+        let phone = document.getElementById("phone").value
+        let password = document.getElementById("password").value
+        let userName = name+" "+last
+        let user = { name, last, email, postal, phone, password, userName}
 
-    fetch("https://6399dbe016b0fdad774be2de.mockapi.io/product")
-        .then((responseObject) => {
-            return responseObject.json();
-        })
-        .then((actualData) => {
-            fetchedData = actualData;
-            displayProduct(actualData)
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-    function displayProduct(actualData) {
-        container.innerHTML = null;
-        actualData.forEach((element) => {
-            let card = document.createElement("div");
-            let image = document.createElement("img");
-            image.setAttribute("src", element.avatar);
-            let name = document.createElement("h3")
-            name.innerText = element.name
-            let category = document.createElement("p");
-            category.innerText = element.category
-            let price = document.createElement("h4");
-            price.innerText = "Price : " + element.price
-            let description = document.createElement("p");
-            description.innerText = element.description
-
-            let addToCart = document.createElement("button");
-            addToCart.innerText = "ADD TO BAG"
-
-            addToCart.addEventListener("click", () => {
-                let cartData = JSON.parse(localStorage.getItem("cart"));
-
-                if (cartData == null) cartData = [];
-
-                let isAlreadyinCart = false;
-                for (let i = 0; i < cartData.length; i++) {
-                    if (cartData[i].id == element.id) {
-                        isAlreadyinCart = true;
-                        break;
-                    }
-                }
-                if (isAlreadyinCart === true) {
-
-                } else {
-                    cartData.push({ ...element, quantity: 1 });
-                   localStorage.setItem("cart", JSON.stringify(cartData));
-                }
-
-            })
-
-            card.append(image, name, category, price, addToCart)
-            container.append(card);
-
-
-        })
-    }           
+        userData.push(user)
+        localStorage.setItem("email-data",JSON.stringify(userData));
+        
+    }
 </script>
 
 </html>

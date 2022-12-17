@@ -31,12 +31,15 @@
                 <input type="search" placeholder="Search by Products">
                 <a href="signIn.html">
                     <img src="https://cdn-fsly.yottaa.net/5d669b394f1bbf7cb77826ae/www.bathandbodyworks.com/v~4b.21a/on/demandware.static/Sites-BathAndBodyWorks-Site/-/default/dw8f5c8e40/images/svg-icons/UI-MyAccount.svg?yocs=o_s_"
-                        width="40px" height="35px" alt="">
+                    width="40px" height="35px" alt="">
                 </a>
                 <a href="cart.html">
                     <img id="cart" src="https://tse1.mm.bing.net/th?id=OIP.3dozFfqPTg-zg6lBEY7pAgHaGE&pid=Api&P=0"
-                        width="30px" height="35px" alt="">
+                    width="30px" height="35px" alt="">
                 </a>
+            </div>
+            <div>
+                <p id="heading_username"></p>
             </div>
         </div>
         <div id="nav2A">
@@ -543,6 +546,11 @@
     </div>
 </body>
 <script>
+ 
+   let userName =localStorage.getItem("user-Name")|| "Sign In";
+    console.log(userName)
+    let user = document.getElementById("heading_username")
+    user.append(userName)
 
 </script>
 
